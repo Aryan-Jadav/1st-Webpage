@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanqueer Building</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative; /* Ensure that the pseudo-element is positioned relative to the body */
+            color: #343a40; /* Charcoal Gray */
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('1.jpeg'); /* Replace 'background-image.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur(2px); /* Add blur effect to the background */
+            z-index: -1; /* Place the pseudo-element behind other content */
+        }
+        header {
+            background-color: rgba(247, 129, 27, 0.8); /* Orange with opacity */
+            color: #ffffff; /* White */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            height: 100px; /* Adjust height as needed */
+            margin-right: 10px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        li
+        {
+          font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: rgba(52, 58, 64, 0.8); /* Charcoal Gray with opacity */
+            color: #ffffff; /* White */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff; /* White */
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: rgba(52, 58, 64, 0.8); /* Charcoal Gray with opacity */
+            color: #ffffff; /* White */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container#gallery .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.enquiry-box {
+    background-color: rgba(52, 58, 64, 0.8);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.enquiry-box h2 {
+    margin-top: 0;
+}
+
+.enquiry-box form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.enquiry-box input[type="text"],
+.enquiry-box input[type="email"],
+.enquiry-box textarea {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.enquiry-box input[type="submit"] {
+    width: 100%;
+    background-color: #f77a27;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enquiry-box input[type="submit"]:hover {
+    background-color: #ff9933;
+}
+
+.enquiry-box textarea {
+    width: 100%;
+    resize: vertical;
+}
+    </style>
+    <script>
+        // JavaScript code goes here
+        // This is just a simple example
+        window.onload = function() {
+            alert("Welcome to Vanqueer Building!");
+        };
+        function displayFormDetails() {
+            // Retrieve form input values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Display form details
+            alert("Name: " + name + "\nEmail: " + email + "\nMessage: " + message);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="D:\photos, gifs & videos for web sites\vanqueer_logo-removebg-preview.png" alt="Vanqueer Logo">
+        <h1>Vanqueer Building</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#services">Services</a>
+        <a href="#location">Location</a>    
+        <a href="#contact">Contact</a>        
+    </nav>
+    <div class="container" id="about">
+        <h2>About Vanqueer Building</h2>
+        <div class="content">
+            <p>Welcome to Vanqueer, where luxury meets comfort in the heart of the city. Nestled amidst the bustling streets, Vanqueer stands tall as a beacon of elegance and sophistication. Boasting unparalleled amenities and breathtaking views, this residential oasis offers an unparalleled living experience. From lavish penthouses to spacious apartments, each abode is meticulously designed to exude opulence and style. Indulge in world-class amenities including a state-of-the-art fitness center, rooftop infinity pool, exclusive spa, and much more. Experience urban living redefined at Vanqueer, where every moment is crafted to perfection.</p>
+        </div>
+    </div>
+    <div class="container" id="gallery">
+    <h2>Gallery</h2>
+    <div class="content">
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\fitness centre.png" alt="Image 1">
+            <div class="overlay">
+                <p>Fitness centre</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\gaming room.png" alt="Image 2">
+            <div class="overlay">
+                <p>Gaming room</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\lounge.png" alt="Image 3">
+            <div class="overlay">
+                <p>Residential lounge</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\movie theatre.png" alt="Image 4">
+            <div class="overlay">
+                <p>Movie theatre</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\pool.png" alt="Image 5">
+            <div class="overlay">
+                <p>infinity pool</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\roof-top garden.png" alt="Image 6">
+            <div class="overlay">
+                <p>Roof-top garden</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\spa.png" alt="Image 7">
+            <div class="overlay">
+                <p>In-house spa</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="D:\photos, gifs & videos for web sites\business centre.png" alt="Image 8">
+            <div class="overlay">
+                <p>Business centre</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container" id="services">
+        <h2>Our Services</h2>
+        <div class="content">
+            <p>Vanqeuur: A Haven of Elevated Services<br>
+Vanqeuur goes beyond stunning apartments and breathtaking views. It offers a comprehensive suite of services designed to pamper your every need and streamline your life, allowing you to focus on what truly matters. Here's a glimpse into the world of unparalleled service that awaits you</p>
+            <ul>
+                <li>Rooftop Oasis: Relax and recharge at the infinity pool, soak up the sun on the landscaped sundeck, or unwind amidst the serenity of the rooftop garden.</li>
+                <li>State-of-the-Art Fitness Center: Maintain your wellness routine in a high-tech gym equipped with cutting-edge equipment and fitness classes.</li>
+                <li>In-House Entertainment: Host movie nights in the luxurious in-house theater, or gather with friends in the vibrant game room featuring billiards, arcade games, and more.</li>
+                <li>24/7 Concierge Service: A dedicated concierge team is available around the clock to assist with anything from restaurant reservations and travel arrangements to package delivery and dry-cleaning pickup.</li>
+                <li>In-Residence Services: Schedule housekeeping, pet care, or personal chef services directly through Vanqeuur's resident portal, ensuring your home is always cared for.</li>
+                <li>Business Center: Stay productive without leaving the building. The business center offers private workstations, soundproofed conference rooms, and high-speed Wi-Fi.</li>
+                <li>On-Site Valet Parking: Eliminate the stress of parking with valet service that takes care of your car upon arrival and return.</li>
+                <li>Welcome Package: Upon arrival, be greeted with a personalized welcome package featuring gourmet treats, luxurious bath amenities, and city guides.</li>
+                <li>Priority Access: Enjoy exclusive resident discounts at nearby restaurants, shops, and entertainment venues.</li>
+                <li>Pet-Friendly Amenities: Vanqeuur welcomes your furry companions with a dedicated dog park, pet grooming services (upon request), and a network of dog walker recommendations.</li>
+                <li>Security and Peace of Mind: Rest assured with 24/7 security personnel, secure building access systems, and in-unit safes.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="location">
+        <h2>Location</h2>
+        <div class="content">
+            <p>Vanqueer Building is located at:</p>
+            <address>
+             388 Madison Corner,<br> New York,<br> NY 10022
+            </address>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <div class="content">
+            <p>For inquiries, please contact:</p>
+            <ul>
+                <li>Email: info@vanqueerbuilding.com</li>
+                <li>Phone: 123-456-7890</li>
+            </ul>
+        </div>
+        <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.890426195728!2d-74.00597568459362!3d40.75889607932958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2597470e36d1b%3A0x215a45d786bd7477!2s388%20Madison%20Ave%2C%20New%20York%2C%20NY%2010017%2C%20USA!5e0!3m2!1sen!2suk!4v1648604399059!5m2!1sen!2suk" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    </div>
+    <div class="container">
+        <div class="enquiry-box">
+            <h2>Enquiry</h2>
+            <form action="#" method="post" onsubmit="displayFormDetails(); return false;">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Vanqueer Building. All rights reserved.
+    </footer>
+</body>
+</html>
